@@ -8,9 +8,8 @@ import {MaterialCommunityIcons, Octicons} from '@expo/vector-icons';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
-import BottomTabNavigator from './MainTabNavigator';
+import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
-import { color } from 'react-native-reanimated';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -32,7 +31,7 @@ function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ 
       headerStyle: {
-        backgroundColor: Colors.light.tint,
+        backgroundColor:  Colors.light.tint,
         shadowOpacity: 0,
         elevation: 0 
       },
@@ -45,7 +44,7 @@ function RootNavigator() {
       }}>
       <Stack.Screen 
         name="Root" 
-        component={BottomTabNavigator} 
+        component={MainTabNavigator} 
         options ={{
           title: "WhatsApp",
           headerRight: () =>  (
@@ -54,10 +53,17 @@ function RootNavigator() {
                 width: 60, 
                 justifyContent: 'space-between' , 
                 marginRight: 10, 
-                backgroundColor: Colors.light.tint
+                backgroundColor: Colors.light.tint,
+                shadowOpacity: 0
               }}>
-              <Octicons name="search" size={22} color={'white'}  />
-              <MaterialCommunityIcons name="dots-vertical" color={'white'} size={22}  />
+              <Octicons 
+                name="search" 
+                size={22} 
+                color={'white'}  />
+              <MaterialCommunityIcons 
+                name="dots-vertical" 
+                color={'white'} 
+                size={22}  />
             </View>
           )
         }}
