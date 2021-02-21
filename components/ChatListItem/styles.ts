@@ -9,14 +9,14 @@ const styles = StyleSheet.create({
     },
     leftContainer: {
         flexDirection: 'row',
-        marginRight: 150
+        marginRight: 100
     },
     midContainer: {
         justifyContent: 'space-around'
     },
     avatar: {
-        width: 60,
-        height: 60,
+        width: 50,
+        height: 50,
         marginRight: 15,
         borderRadius:  50
     },
