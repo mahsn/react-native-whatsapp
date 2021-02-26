@@ -11,7 +11,8 @@ export type ChatListItemProps = {
 
 const ChatListItem =  (props: ChatListItemProps) => {
     const { chatRoom } = props;
-    const user = chatRoom.users[1];
+    let index = 1;
+    const user = chatRoom.users[index];
 
     const navigation = useNavigation();
 
@@ -33,7 +34,7 @@ const ChatListItem =  (props: ChatListItemProps) => {
                             <Text ellipsizeMode={'tail'} style={styles.lastMessage}> {chatRoom.lastMessage.content}</Text>
                         </View>
                     </View>
-                    <Text style={styles.time}>{moment(chatRoom.lastMessage.createdAt).format('DD/MM//YYYY')}</Text>
+                    <Text style={styles.time}>{moment(chatRoom.lastMessage.createdAt).format('DD/MM/YYYY')}</Text>
         </View>
         </TouchableWithoutFeedback>
        

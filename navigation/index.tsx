@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName, Image, View } from 'react-native';
 import Colors from '../constants/Colors';
-import {MaterialCommunityIcons, Octicons, Fontisto} from '@expo/vector-icons';
+import {MaterialCommunityIcons, Octicons, FontAwesome5, MaterialIcons} from '@expo/vector-icons';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
@@ -85,6 +85,22 @@ function RootNavigator() {
           >
             <Image style={styles.avatar} source={route.params.image}/>
             <p style={{ color: 'white', fontWeight: 'bold'}}>{route.params.name}</p>
+          </View>
+          
+        ),
+        headerRight: () => (
+          <View  
+            style={{
+              flexDirection:'row', 
+              width: 100,
+              justifyContent: 'space-between' , 
+              backgroundColor: Colors.light.tint,
+              marginRight:10
+            }} 
+          >
+              <FontAwesome5 name="video" size={18} color={'white'}/>
+              <MaterialIcons name="call" size={18} color={'white'}/>
+              <MaterialCommunityIcons name="dots-vertical" color={'white'} size={18} />
           </View>
         )
       })} 
