@@ -26,8 +26,26 @@ export default {
         },
         {
             id: 'm2',
-            content: 'I am good',
+            content: 'I am good, What about you?',
             createdAt: '2020-10-03T14:48:00.000Z',
+            user: {
+                id: 'u2',
+                name: 'Lukas'
+            }
+        },
+        {
+            id: 'm3',
+            content: 'Good, I there any process about new implementation?',
+            createdAt: '2020-10-03T14:50:00.000Z',
+            user: {
+                id: 'u1',
+                name: 'Mahsun'
+            }
+        },
+        {
+            id: 'm4',
+            content: 'Still developing, probably we gonna have a respone until tomorrow',
+            createdAt: '2020-10-03T14:55:00.000Z',
             user: {
                 id: 'u2',
                 name: 'Lukas'
