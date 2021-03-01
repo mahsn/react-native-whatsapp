@@ -8,6 +8,12 @@ const styles = StyleSheet.create({
     rightContainer: {
         borderRadius: 1,
         padding: 10
+        
+    },
+    midContainer: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexDirection: 'row'
     },
     username: {
         color: Colors.light.tint,
@@ -20,7 +26,12 @@ const styles = StyleSheet.create({
     createdAt: {
         alignSelf: 'flex-end',
         color: 'grey'
-    }
+    },
+    avatar: {
+        width: 20,
+        height: 20,
+        borderRadius:  50
+    },
 
 });
 

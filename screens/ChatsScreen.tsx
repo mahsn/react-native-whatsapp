@@ -5,6 +5,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import ChatListItem from '../components/ChatListItem/index';
 import chatRooms from '../data/ChatsRooms';
 
+
 export default function ChatsScreen() {
   return (
     <View style={styles.container}>

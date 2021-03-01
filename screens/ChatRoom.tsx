@@ -1,9 +1,10 @@
 import React from 'react';
 import {Text, View, FlatList} from  'react-native';
 import {useRoute} from '@react-navigation/native';
-import styles from '../components/ChatListItem/styles';
+import styles from '../components/ChatMessage/styles';
 import chats from '../data/Chats';
 import ChatMessage from '../components/ChatMessage/index';
+import InputMessage from '../components/InputMessage';
 
 const ChatRoomScreen = () => {
 
@@ -16,6 +17,7 @@ const ChatRoomScreen = () => {
                 keyExtractor={(item) => item.id}  
                 inverted
             />
+             <InputMessage />
         </View>
     );
 }
