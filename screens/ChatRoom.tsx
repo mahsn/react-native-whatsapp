@@ -11,9 +11,10 @@ const ChatRoomScreen = () => {
     return (
         <View  style={styles.container}>
             <FlatList  
-            data={chats.messages} 
-            renderItem={({item}) => <ChatMessage message={item}/>}
-            keyExtractor={(item) => item.id}  
+                data={chats.messages} 
+                renderItem={({item}) => <ChatMessage message={item}/>}
+                keyExtractor={(item) => item.id}  
+                inverted
             />
         </View>
     );
